@@ -1,0 +1,1 @@
+!function(){"use strict";jQuery(".autodecor").autoDecor({maxHeight:"50px",maxWidth:"50px",animate:!0,animationName:"rotate",animationDuration:"5s",animationDelay:"0s",opacity:.1})}();

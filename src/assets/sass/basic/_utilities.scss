@@ -1,0 +1,190 @@
+/**
+ * Utilities
+ */
+
+.hidden {
+	display: none;
+}
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/* Define Colors */
+.color-theme {
+	color: $color-theme;
+}
+
+.color-secondary {
+	color: $color-secondary;
+}
+
+.color-dark {
+	color: $color-dark;
+}
+
+.colog-grey {
+	color: $color-grey;
+}
+
+.color-black {
+	color: $color-black;
+}
+
+.color-white {
+	color: $color-white;
+}
+
+
+/* Background Color */
+.bg-theme {
+	background: $color-theme;
+}
+
+.bg-secondary {
+	background: $color-secondary;
+}
+
+.bg-grey {
+	background: $color-grey;
+}
+
+.bg-dark {
+	background: $color-dark;
+}
+
+.bg-black {
+	background: $color-black;
+}
+
+.bg-white {
+	background: $color-white !important;
+}
+
+/* Text specialized */
+.text-italic {
+	font-style: italic;
+}
+
+.text-normal {
+	font-style: normal;
+}
+
+.text-underline {
+	font-style: underline;
+}
+
+/* Font specialized */
+.body-font {
+	font-family: $ff-body;
+}
+
+.heading-font {
+	font-family: $ff-heading;
+}
+
+.fullscreen {
+	min-height: 100vh;
+	width: 100%;
+}
+
+
+/* Preloader Styels */
+.tm-preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	background: rgba($color-theme, 0.98);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+
+	span {
+		display: inline-block;
+		height: 30px;
+		width: 30px;
+		background: 0 0;
+		border-radius: 1000px;
+		position: relative;
+		z-index: 1;
+
+		&::before,
+		&::after {
+			content: "";
+			left: 50%;
+			top: 50%;
+			position: absolute;
+			display: inline-block;
+			border-radius: 1000px;
+		}
+
+		&::before {
+			height: 190%;
+			width: 190%;
+			margin-left: -28.5px;
+			margin-top: -28.5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: #ffffff transparent;
+			animation: tmSpinReverse 1s linear infinite;
+		}
+
+		&::after {
+			height: 250%;
+			width: 250%;
+			margin-left: -37.5px;
+			margin-top: -37.5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: transparent #ffffff;
+			animation: tmSpin 1s linear infinite;
+		}
+	}
+
+	.tm-button {
+		position: absolute;
+		left: auto;
+		top: auto;
+		right: 15px;
+		bottom: 15px;
+	}
+}
+
+.wrapper {
+	position: relative;
+}

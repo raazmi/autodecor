@@ -1,0 +1,73 @@
+/**
+ * Heroarea
+ */
+
+.heroarea {
+    width: 100%;
+    min-height: 100vh;
+    @include gradient-bg(a, 90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: #ffffff;
+    }
+
+    &-content {
+        text-align: center;
+
+        h1 {
+            font-weight: 700;
+            font-size: 68px;
+            line-height: 78px;
+        }
+
+        h3 {
+            margin-top: 25px;
+        }
+
+        .button {
+            margin-top: 25px;
+            background: #ffffff;
+            color: $color-theme;
+            padding: 20px 50px 15px 50px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: 500;
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        &-content {
+            h1 {
+                font-size: 52px;
+                line-height: 62px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media #{$layout-mobile-sm} {
+        &-content {
+            h1 {
+                font-size: 42px;
+                line-height: 52px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+}

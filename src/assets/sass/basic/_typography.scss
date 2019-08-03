@@ -1,0 +1,319 @@
+/**
+ * Typography
+ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    overflow: hidden !important;
+    font-size: $fz-body;
+    line-height: $lh-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $ff-body;
+    color: $color-body;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+}
+
+@include placeholder-color($color-body);
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+p,
+pre,
+blockquote,
+dl,
+dd,
+menu,
+ol,
+ul,
+table,
+caption,
+hr {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $ff-heading;
+    color: $color-heading;
+}
+
+h1,
+.h1 {
+    font-size: $fz-heading-1;
+    line-height: $lh-heading-1;
+}
+
+h2,
+.h2 {
+    font-size: $fz-heading-2;
+    line-height: $lh-heading-2;
+}
+
+h3,
+.h3 {
+    font-size: $fz-heading-3;
+    line-height: $lh-heading-3;
+}
+
+h4,
+.h4 {
+    font-size: $fz-heading-4;
+    line-height: $lh-heading-4;
+}
+
+h5,
+.h5 {
+    font-size: $fz-heading-5;
+    line-height: $lh-heading-5;
+}
+
+h6,
+.h6 {
+    font-size: $fz-heading-6;
+    line-height: $lh-heading-6;
+}
+
+@media #{$layout-tablet} {
+
+    h1,
+    .h1 {
+        font-size: $fz-heading-1 - 6;
+        line-height: $lh-heading-1 - 6;
+    }
+
+    h2,
+    .h2 {
+        font-size: $fz-heading-2 - 4;
+        line-height: $lh-heading-2 - 4;
+    }
+
+    h3,
+    .h3 {
+        font-size: $fz-heading-3 - 2;
+        line-height: $lh-heading-3 - 2;
+    }
+}
+
+@media #{$layout-mobile-lg} {
+
+    h1,
+    .h1 {
+        font-size: $fz-heading-1 - 8;
+        line-height: $lh-heading-1 - 8;
+    }
+
+    h2,
+    .h2 {
+        font-size: $fz-heading-2 - 6;
+        line-height: $lh-heading-2 - 6;
+    }
+
+    h3,
+    .h3 {
+        font-size: $fz-heading-3 - 4;
+        line-height: $lh-heading-3 - 4;
+    }
+
+    h4,
+    .h4 {
+        font-size: $fz-heading-4 - 2;
+        line-height: $lh-heading-4 - 2;
+    }
+
+    h5,
+    .h5 {
+        font-size: $fz-heading-5 - 2;
+        line-height: $lh-heading-5 - 2;
+    }
+
+    h6,
+    .h6 {
+        font-size: $fz-heading-6 - 2;
+        line-height: $lh-heading-6 - 2;
+    }
+}
+
+::-moz-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::-ms-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::-o-selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+::selection {
+    background: $color-theme;
+    color: #ffffff;
+}
+
+a {
+    transition: all 0.3s ease-in-out 0s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        outline: none;
+    }
+
+    &:visited {
+        color: inherit;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+button,
+select,
+textarea {
+    background: transparent;
+    border: 1px solid $color-border;
+    transition: all 0.4s ease-out 0s;
+    color: $color-body;
+    @include placeholder-color($color-body);
+    font-family: $ff-body;
+
+    &:focus,
+    &:active {
+        outline: none;
+        border-color: $color-theme;
+    }
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+input,
+select,
+button {
+    height: $input-button-height;
+    padding: 0 15px;
+
+    @media #{$layout-mobile-lg} {
+        height: 44px;
+    }
+}
+
+textarea {
+    padding: 10px 15px;
+}
+
+blockquote {
+    border-left: 5px solid $color-theme;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "\f10d";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        font-size: 108px;
+        color: #f6f6f6;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+
+        a {
+            color: $color-theme;
+
+            &:hover {
+                color: $color-theme;
+            }
+        }
+    }
+
+    @media #{$layout-mobile-lg} {
+        font-size: 16px;
+        line-height: 25px;
+        padding: 20px;
+    }
+}
+
+[class^="flaticon-"],
+[class*=" flaticon-"],
+[class^="flaticon-"],
+[class*=" flaticon-"] {
+    line-height: 1;
+
+    &::before,
+    &::after {
+        margin-left: 0;
+        font-size: inherit;
+        vertical-align: middle;
+    }
+}
+
+.stylish-list {
+    padding-left: 0;
+
+    li {
+        list-style: none;
+        line-height: 30px;
+        position: relative;
+        padding-left: 35px;
+    }
+
+    i {
+        position: absolute;
+        left: 0;
+        top: 7px;
+        font-size: 16px;
+        color: $color-theme;
+    }
+}
