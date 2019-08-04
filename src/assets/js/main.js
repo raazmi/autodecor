@@ -2,6 +2,12 @@
     'use strict';
 
 
+    /* Preloader */
+    $(window).on('load', function () {
+        $('.preloader').fadeOut()
+    });
+
+
     /* Acitve Autodecor */
     $('.autodecor').autoDecor({
         maxHeight: '50px',

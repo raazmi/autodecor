@@ -120,8 +120,32 @@
 }
 
 
+@keyframes tmSpin {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes tmSpinReverse {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+
+	100% {
+		-webkit-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+}
+
 /* Preloader Styels */
-.tm-preloader {
+.preloader {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -176,7 +200,7 @@
 		}
 	}
 
-	.tm-button {
+	.button {
 		position: absolute;
 		left: auto;
 		top: auto;

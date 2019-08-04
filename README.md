@@ -13,13 +13,13 @@
 	`$('.autodecor').autodecor();`
 
 ## Options
-**animate**: true,
-**animationName**: 'rotate',
-**animationDuration**: '5s',
-**animationDelay** : '0s',
-**opacity**: 1,
-**max-height**: '50px',
-**max-width**: 50px,
+**animate**: true,  
+**animationName**: 'rotate',  
+**animationDuration**: '5s',  
+**animationDelay** : '0s',  
+**opacity**: 1,  
+**max-height**: '50px',  
+**max-width**: 50px,  
 
 > Here you see our default values. You can change this with your custom values.
 

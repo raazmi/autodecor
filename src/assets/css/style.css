@@ -644,8 +644,52 @@ blockquote footer a:hover {
   width: 100%;
 }
 
+@-webkit-keyframes tmSpin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tmSpin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes tmSpinReverse {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes tmSpinReverse {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
 /* Preloader Styels */
-.tm-preloader {
+.preloader {
   position: fixed;
   left: 0;
   top: 0;
@@ -668,7 +712,7 @@ blockquote footer a:hover {
   z-index: 1000;
 }
 
-.tm-preloader span {
+.preloader span {
   display: inline-block;
   height: 30px;
   width: 30px;
@@ -678,7 +722,7 @@ blockquote footer a:hover {
   z-index: 1;
 }
 
-.tm-preloader span::before, .tm-preloader span::after {
+.preloader span::before, .preloader span::after {
   content: "";
   left: 50%;
   top: 50%;
@@ -687,7 +731,7 @@ blockquote footer a:hover {
   border-radius: 1000px;
 }
 
-.tm-preloader span::before {
+.preloader span::before {
   height: 190%;
   width: 190%;
   margin-left: -28.5px;
@@ -699,7 +743,7 @@ blockquote footer a:hover {
           animation: tmSpinReverse 1s linear infinite;
 }
 
-.tm-preloader span::after {
+.preloader span::after {
   height: 250%;
   width: 250%;
   margin-left: -37.5px;
@@ -711,7 +755,7 @@ blockquote footer a:hover {
           animation: tmSpin 1s linear infinite;
 }
 
-.tm-preloader .tm-button {
+.preloader .button {
   position: absolute;
   left: auto;
   top: auto;
