@@ -1,1 +1,1 @@
-!function(a){"use strict";a(window).on("load",function(){a(".preloader").fadeOut()}),a(".autodecor").autoDecor({maxHeight:"50px",maxWidth:"50px",animate:!0,animationName:"rotate",animationDuration:"5s",animationDelay:"0s",opacity:.1})}(jQuery);
+!function(a){"use strict";a(window).on("load",function(){a(".preloader").fadeOut()}),a(".autodecor").autoDecor({maxHeight:"50px",maxWidth:"50px",animate:!0,animationName:"pumping",animationDuration:"5s",animationDelay:"0s",opacity:.1})}(jQuery);
